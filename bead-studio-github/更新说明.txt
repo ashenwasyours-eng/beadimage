@@ -1,0 +1,59 @@
+拼豆图纸工具 — GitHub Pages 部署 & 更新说明
+（不用懂 git，全程网页操作）
+
+═══════════════════════════════
+【第一次】建仓库 + 发布（只做一次）
+═══════════════════════════════
+
+1. 打开 https://github.com/new
+   - Repository name：bead-studio
+   - 选 Public（必须，否则 iPad 访问可能要登录）
+   - 勾选 "Add a README file"（可选）
+   - 点 Create repository
+
+2. 进仓库 → 点 "Add file" → "Upload files"
+   - 把本文件夹里 6 个文件全拖进去：
+     index.html / manifest.webmanifest / icon-192.png / icon-512.png /
+     apple-touch-icon.png / favicon.svg
+   - 点绿色 "Commit changes"
+
+3. 仓库页面 → 顶部 "Settings" → 左侧 "Pages"
+   - Source：选 "Deploy from a branch"
+   - Branch：main
+   - Folder：/ (root)
+   - 点 Save
+
+4. 等 1-2 分钟，访问：
+   https://<你的GitHub用户名>.github.io/bead-studio/
+
+5. iPad Safari 打开上面地址 → 点分享 → "添加到主屏幕"
+   → 从桌面图标打开 = 全屏独立 App（无地址栏）
+   ⚠️ 图标只加这一次，以后更新内容不用重加
+
+═══════════════════════════════
+【以后每次更新】只换 1 个文件：index.html
+═══════════════════════════════
+（图标和 manifest 一般不会变，不用动）
+
+前提：我会先把最新版 index.html 覆盖到
+      ~/Desktop/bead-studio-github/index.html
+      并告诉你"已更新到 v2xx"
+
+你的操作（3 步，1 分钟）：
+
+1. 打开你的仓库页面，点开 index.html
+2. 右上角点"垃圾桶"图标删除 → Commit changes
+3. 点 "Add file" → "Upload files"
+   → 拖入 ~/Desktop/bead-studio-github/index.html
+   → Commit changes
+
+然后等 1-2 分钟，iPad 上打开 App 刷新即可
+（主屏图标不用动，地址没变）
+
+═══════════════════════════════
+常见问题
+═══════════════════════════════
+- 页面 404：等 2 分钟再看，Pages 部署有延迟
+- 图标没变：iPad 删掉主屏图标重新添加一次（换图标才需要）
+- 想看当前版本：App 顶栏右侧显示 v2xx
+- 仓库私有：不建议，iPad 访问可能要登录
